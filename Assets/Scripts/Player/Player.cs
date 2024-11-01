@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
         if (PlayerInstance == null)
         {
             PlayerInstance = this; // Set object sebagai Singleton PlayerInstance
-            DontDestroyOnLoad(gameObject); // Mencegah destruction on scene load
+            DontDestroyOnLoad(gameObject); // Mencegah destruction pada scene load
         }
         else
         {
