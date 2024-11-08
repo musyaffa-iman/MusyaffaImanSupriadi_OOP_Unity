@@ -71,6 +71,14 @@ public class PlayerMovement : MonoBehaviour
             currentVelocity = currentVelocity.normalized * maxSpeed.magnitude;
         }
 
+
+        Vector2 min = (Vector2)Camera.main.ViewportToWorldPoint(Vector2.zero) + new Vector2(0.225f, 0.1005f);
+        Vector2 max = (Vector2)Camera.main.ViewportToWorldPoint(Vector2.one) - new Vector2(0.225f, 0.5f);
+
+        float boundX = Mathf.Clamp(transform.position.x, min.x, max.x);
+        float boundY = Mathf.Clamp(transform.position.y, min.y, max.y);
+        transform.position = new Vector2(boundX, boundY);
+
         rb.velocity = currentVelocity;
     }
 

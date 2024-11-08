@@ -10,15 +10,14 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        // Check apakah sebuah PlayerInstance sudah ada
         if (PlayerInstance == null)
         {
-            PlayerInstance = this; // Set object sebagai Singleton PlayerInstance
-            DontDestroyOnLoad(gameObject); // Mencegah destruction pada scene load
+            PlayerInstance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Destroy PlayerInstance duplikat
+            Destroy(gameObject);
         }
     }
 
