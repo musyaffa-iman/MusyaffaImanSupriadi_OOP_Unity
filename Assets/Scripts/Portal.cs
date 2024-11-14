@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float rotateSpeed;
+    [SerializeField] float speed = 0.15f;
+    [SerializeField] float rotateSpeed = 5.0f;
     Vector2 newPosition;
 
     void Start()
@@ -42,7 +40,7 @@ public class Portal : MonoBehaviour
     void ChangePosition()
     {
         // Mengatur newPosition ke suatu titik random dalam suatu batasan
-        newPosition = new Vector2(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        newPosition = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
     }
 
     void OnTriggerEnter2D(Collider2D other)

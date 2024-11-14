@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -21,6 +20,8 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(GameObject.Find("Main Camera"));
+        if (GameObject.Find("Bullets") != null)
+            DontDestroyOnLoad(GameObject.Find("Bullets"));
     }
 
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,6 +5,7 @@ public class Player : MonoBehaviour
     public static Player PlayerInstance { get; private set; }
     public PlayerMovement playerMovement;
     public Animator animator;
+    private WeaponPickup currentWeaponPickup;
 
     private void Awake()
     {
@@ -34,6 +33,16 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
+        playerMovement.MoveBound();
         animator.SetBool("IsMoving", playerMovement.IsMoving());
+    }
+
+    public void SwitchWeapon(Weapon newWeapon, WeaponPickup newWeaponPickup)
+    {
+        if (currentWeaponPickup != null)
+        {
+            currentWeaponPickup.PickupHandler(true);
+        }
+        currentWeaponPickup = newWeaponPickup;
     }
 }
