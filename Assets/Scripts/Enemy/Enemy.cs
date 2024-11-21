@@ -1,16 +1,29 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    public int level = 1; // Level untuk setiap musuh
+    [SerializeField] protected int level;
+
+    public UnityEvent enemyKilledEvent;
 
     protected virtual void Start()
     {
-        // Bisa ditambahkan logika umum untuk semua musuh
+    enemyKilledEvent ??= new UnityEvent();
     }
 
-    protected virtual void Update()
+    public void SetLevel(int level)
     {
-        // Logika umum bisa ditambahkan di sini
+    this.level = level;
+    }
+
+    public int GetLevel()
+    {
+    return level;
+    }
+
+    private void OnDestroy()
+    {
+    enemyKilledEvent.Invoke();
     }
 }

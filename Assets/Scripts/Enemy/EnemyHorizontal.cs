@@ -17,9 +17,9 @@ public class EnemyHorizontal : Enemy
         transform.position = new Vector2(spawnSide * Camera.main.aspect * Camera.main.orthographicSize, transform.position.y);
     }
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
+
         
         // Pindahkan enemy secara horizontal
         transform.Translate(direction * speed * Time.deltaTime);

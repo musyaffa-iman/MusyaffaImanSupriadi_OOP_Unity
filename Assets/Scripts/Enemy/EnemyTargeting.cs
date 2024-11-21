@@ -23,10 +23,8 @@ public class EnemyTargeting : Enemy
         }
     }
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
-
         // Move towards the player if it exists
         if (player != null)
         {

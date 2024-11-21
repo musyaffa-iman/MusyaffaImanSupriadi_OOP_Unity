@@ -24,9 +24,9 @@ public class EnemyBoss : Enemy
         transform.position = new Vector2(spawnSide * Camera.main.aspect * Camera.main.orthographicSize, transform.position.y);
     }
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();  
+
         transform.Translate(direction * speed * Time.deltaTime);
         if (Mathf.Abs(transform.position.x) > Camera.main.aspect * Camera.main.orthographicSize)
         {

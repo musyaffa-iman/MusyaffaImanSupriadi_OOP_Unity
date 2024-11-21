@@ -12,10 +12,8 @@ public class EnemyForward : Enemy
         transform.position = new Vector2(Random.Range(-Camera.main.aspect * Camera.main.orthographicSize, Camera.main.aspect * Camera.main.orthographicSize), Camera.main.orthographicSize);
     }
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
-
         // Pindahkan enemy ke bawah
         transform.Translate(Vector2.down * speed * Time.deltaTime);
 
