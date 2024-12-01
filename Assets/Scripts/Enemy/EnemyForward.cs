@@ -20,7 +20,7 @@ public class EnemyForward : Enemy
         // Jika keluar dari layar, hancurkan objek
         if (transform.position.y < -Camera.main.orthographicSize)
         {
-            Destroy(gameObject);
+            transform.position = new Vector2(Random.Range(-Camera.main.aspect * Camera.main.orthographicSize, Camera.main.aspect * Camera.main.orthographicSize), Camera.main.orthographicSize);
         }
     }
 

@@ -9,21 +9,21 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
-    enemyKilledEvent ??= new UnityEvent();
+        enemyKilledEvent ??= new UnityEvent();
     }
 
     public void SetLevel(int level)
     {
-    this.level = level;
+        this.level = level;
     }
 
     public int GetLevel()
     {
-    return level;
+        return level;
     }
 
     private void OnDestroy()
     {
-    enemyKilledEvent.Invoke();
+        enemyKilledEvent.Invoke();
     }
 }

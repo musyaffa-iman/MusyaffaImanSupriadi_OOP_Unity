@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="Container" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Voidter" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 90px; -unity-text-align: upper-center; color: rgb(255, 255, 255); -unity-font-style: bold-and-italic;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

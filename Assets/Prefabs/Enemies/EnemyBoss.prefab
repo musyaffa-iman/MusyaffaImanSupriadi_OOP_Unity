@@ -176,7 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d4fb4d50ecd1f43aa90d66ff539c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 3
+  enemyKilledEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &525608002164421987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  enemyKilledEvent:
+    m_PersistentCalls:
+      m_Calls: []
   bulletPrefab: {fileID: 2075195172402330672, guid: 58039d588a81c8b49a1b815fb6dd83ec, type: 3}
   bulletSpawnPoint: {fileID: 0}
   parentTransform: {fileID: 174181666111253992}
